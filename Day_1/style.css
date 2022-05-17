@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right,#cd6f98, #83a7cb);
+    font-family: sans-serif;
+}
+
+#wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: #cdd3e0;
+    width: 350px;
+    height: 460px;
+    position: relative;
+    margin-top: 120px;
+    border-radius: 10px;
+    background-image: linear-gradient(360deg, #757f9a, #d7dde8);
+    /* width: 40%; */
+    /* height: 40%; */
+    
+}
+
+.card__favorite, .card__cart{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+}
+.card__favorite{
+    /* color: #fff; */
+}
+
+.card__cart{
+    left: unset;
+    right: 20px;
+}
+
+.card__item{
+    width: 90%;
+}
+
+.card__item-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    /* transition-delay: 0.4s; */
+}
+
+.card:hover .card__item-img{
+    transform: translateY(-110px) rotate(-30deg);
+}
+
+.card__title, .card__price{
+    position: absolute;
+    font-size: 24px;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    font-weight: 600;
+    transition: 0.5s;
+
+}
+.card__price{
+    top: 60%;
+    color: #087f5b;
+}
+
+.card__size p, .card__color p{
+    color: #444;
+    font-size: 20px;
+}
+
+.card__color,
+.card__size{
+    margin-left: 12px;
+    margin-bottom: 20px;    
+    display: flex;
+    align-items: center;
+    gap: 8px;
+ 
+}
+.card__size{
+    margin-top: 150px;
+}
+
+.card__size, .card__color, .card__action{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+}
+
+.card:hover .card__size,
+.card:hover .card__color,
+.card:hover .card__action{
+    transform: translateY(-160px);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.card:hover .card__title{
+    transform: translate(-45px, -50px);
+
+}
+.card:hover .card__price{
+    transform: translate(-120px, -50px);
+}
+
+
+
+.card__size span{
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    background-color: #fff;
+    /* margin-right: 4px; */
+    cursor: pointer;
+}
+
+
+
+.card__color--blue,
+.card__color--pink,
+.card__color--yellow{
+    border-radius: 10px;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card__color--blue{
+    background-color: blue;
+}
+.card__color--pink{
+    background-color: #cd6f98;
+}
+.card__color--yellow{
+    background-color: yellow;
+}
+
+.card__buy{
+    margin-left: 16px;
+
+}
+.card__add-cart{
+    margin-left: 16px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;background-color: #3d8880;
+    border: 0;
+}
+
+
